@@ -1,0 +1,224 @@
+@import 'mixin.scss';
+@import 'variables.scss';
+
+* {
+    @include reset-list;
+}
+
+.container {
+    @include container;
+}
+
+nav {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    border-bottom: 1px solid $main-grey;
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .nav-logo {
+
+            h2 {
+                font-size: 36px;
+                color: white;
+
+                span {
+                    color: $main-yellow;
+                }
+            }
+
+        }
+
+        .nav-ul {
+            display: flex;
+
+            li {
+                padding: 30px 10px;
+
+                a {
+                    text-decoration: none;
+                    font-weight: 400;
+                    color: white;
+
+                    span {
+                        color: $main-yellow;
+                    }
+                }
+            }
+        }
+
+        .nav-right {
+            p {
+                color: white;
+            }
+
+            span {
+                color: $main-yellow;
+            }
+        }
+
+    }
+}
+
+#banner {
+    .carousel-inner {
+
+        .carousel-item {
+            .carousel {
+                text-align: center;
+
+                .carousel-box1 {
+                    @include bootstrap-box
+                }
+
+                .carousel-box2 {
+                    @include bootstrap-box;
+                }
+
+            }
+        }
+
+    }
+}
+
+#pulse {
+    background-image: url('../images/menu-bg.jpg.webp');
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    .pulse {
+        .pulse-text {
+            display: flex;
+            justify-content: center;
+
+            h2 {
+                position: relative;
+                color: white;
+                font-size: 48px;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    left: -270px;
+                    top: 30px;
+                    background-color: $main-yellow;
+                    width: 250px;
+                    height: 1px;
+
+                }
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    right: -270px;
+                    top: 30px;
+                    background-color: $main-yellow;
+                    width: 250px;
+                    height: 1px;
+
+                }
+            }
+        }
+
+        .pulse-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+
+            .pulse-box {
+                background-color: transparent;
+                display: grid;
+                gap: 40px;
+                grid-template-columns: 1fr 1fr;
+
+                .card {
+                    background-color: transparent;
+                    border: none;
+                    display: flex;
+                    flex-direction: column;
+
+
+                    .pulse-box-top {
+                        h2 {
+                            color: white;
+                            font-size: 18px;
+                        }
+                    }
+
+                    .pulse-box-bottom {
+                        color: white;
+                        display: flex;
+                        gap: 30px;
+
+                        p {
+                            color: $main-grey;
+                            font-size: 12px;
+
+                            span {
+                                padding-left: 40px;
+                            }
+                        }
+
+                        h5 {
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+#details {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#add {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    .add {
+        background-color: blueviolet;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+
+        form {
+            padding-top: 100px;
+            input {
+                display: block;
+                padding: 10px;
+                min-width: 250px;
+                margin-bottom: 30px;
+            }
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 90%;
+            margin-bottom: 20px;
+
+            th {
+                background-color: #f2f2f2;
+                color: #333;
+                font-weight: bold;
+                padding: 10px;
+                text-align: left;
+                border-right: 3px solid $main-grey;
+            }
+
+            td {
+                padding: 10px;
+                border: 1px solid #ddd;
+            }
+        }
+    }
+}

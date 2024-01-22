@@ -1,0 +1,36 @@
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: $main-family;
+}
+
+@mixin container {
+  max-width: 1200px;
+  padding: 0 32px;
+  margin: auto;
+}
+
+@mixin bootstrap-box {
+  padding-top: 300px;
+  padding-bottom: 300px;
+  background-image: url('../images/slider-1.jpg.webp');
+
+  h1 {
+    color: white;
+    font-size: 110px;
+    position: relative;
+    span{
+      position: absolute;
+      bottom: 0;
+      color: white;
+      font-size: 16px;
+      right: 400px;
+    }
+    i{
+      color: $main-yellow;
+    }
+  }
+
+}
